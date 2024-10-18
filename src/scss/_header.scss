@@ -1,0 +1,339 @@
+.head {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+
+    &.home-header {
+        background: url("/src/img/symbol.svg") no-repeat center/ auto 100%; 
+        min-height: 100vh;
+    }
+
+    &__header {
+        @media screen and (min-width:$breakpoint-md) {
+            padding: 50px 0 0;
+        }
+    }
+
+    &__title {
+        color: $basic-white;
+        text-align: center;
+    }
+
+    &__link {
+        width: 42px;
+        height: 42px;
+        border-radius: $radius-rounded;
+        border: 2px solid $basic-white;
+        position: relative;
+        margin: 0 auto 30px;
+
+        &:hover {
+            border: 2px solid $accent; 
+        }
+
+        &:hover::before {
+            border-bottom: 2px solid $accent;
+            border-left: 2px solid $accent;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 9px;
+            left: 12px;
+            width: 14px;
+            height: 14px;
+            border-bottom: 2px solid $basic-white;
+            border-left: 2px solid $basic-white;
+            transform: rotate(-45deg);
+        }     
+    }
+}
+
+.header {
+    &__container {
+        position: relative;
+    }
+
+    &__inner {
+        background: rgba(245, 245, 250, 0.2);
+        margin: 0 -30px 15px;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (min-width:$breakpoint-md) {
+            background:transparent;
+            padding: 0;
+            margin: 0 0 30px;
+            justify-content: flex-start;
+            gap: 6px;
+        }
+
+        @media screen and (min-width:$breakpoint-lg) {
+            justify-content: flex-end;
+            margin: 0 0 16px;
+        }
+    }
+
+    &__langs {
+        display: flex;
+    }
+
+    &__langs-link {
+        padding: 6px 7px;
+        display: block;
+        border-radius: $radius-sm;
+        color: $basic-white;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &.active {
+            background: $accent;
+        }
+
+        &:hover {
+            background: #FFFFFF20;
+            color: $basic-white;
+        }
+    }
+
+    &__address {
+        display: none;
+
+        @media screen and (min-width:$breakpoint-md) {
+            display: block;
+            color: $grey-text; 
+        }
+    }
+
+    &__phone {
+        color: $basic-white;
+        font-weight: 700;
+        text-decoration: none; 
+    }
+
+    &__social {
+        display: none;
+
+        @media screen and (min-width:$breakpoint-md) {
+            display: block; 
+            svg {
+                width: 24px;
+                height: 24px;
+                fill: $basic-white;
+
+                &:hover {
+                    fill: $accent;
+                }
+            }
+        }
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-logo-wrapper {
+            display: flex;
+            align-items: flex-start;
+            gap: 4px;
+        }
+
+        @media screen and (min-width:$breakpoint-md) {
+            margin: 0 0 30px;
+        }
+
+        @media screen and (min-width:$breakpoint-lg) {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            transform: translateY(-50%);
+        }
+
+    }
+
+    &__box-logo {
+        img {
+            @media screen and (min-width:$breakpoint-md) {
+                width: 130px;
+                height: 60px;
+            }  
+        }
+    }
+
+    &__box-info {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    &__box-slash {
+        background: url(/src/img/slash.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 12px;
+        height: 26px;
+
+        @media screen and (min-width:$breakpoint-md) {
+            width: 21px;
+            height: 47px;
+        }
+    }
+
+    &__box-item {
+        color: $basic-white;
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: 400;
+
+        @media screen and (min-width:$breakpoint-md) {
+            font-size: 36px;
+        }
+    }
+
+    &__box-burger {
+        width: 18px;
+        height: 14px;
+        position: relative;
+        cursor: pointer;
+
+        @media screen and (min-width:$breakpoint-md) {
+            display: none; 
+        }
+
+        &::before,
+        &::after,
+        span {
+            content: "";
+            position: absolute;
+            width: 100%;
+            right: 0;
+            top: 0;
+            height: 2px;
+            background: $basic-white;
+        }
+
+        &::after {
+            top: auto;
+            bottom: 0;
+        }
+
+        span {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__nav {
+        position: fixed;
+        z-index: 20;
+        bottom: 100%;
+        left: 8px;
+        right: 8px;
+        background: $basic-white;
+        padding: 12px;
+        border-top-right-radius: $radius-md;
+        border-top-left-radius: $radius-md;
+
+        &.active {
+            bottom: 0;
+        }
+
+        @media screen and (min-width:$breakpoint-md) {
+            border-radius: 0;
+            position: static;
+            display: block;
+            background: transparent;
+            padding: 0;
+        }  
+    }
+
+    &__nav-close {
+        width: 22px;
+        height: 22px;
+        position: relative;
+        cursor: pointer;
+        margin: 0 0 20px auto;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: $accent;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+
+        @media screen and (min-width:$breakpoint-md) {
+           display: none; 
+        } 
+    }
+
+    &__list {
+        display: flex;
+        flex-flow: column;
+        gap: 15px;
+
+        @media screen and (min-width:$breakpoint-md) {
+            flex-flow: row;
+        }  
+
+        @media screen and (min-width:$breakpoint-lg) {
+            justify-content: flex-end;
+        }
+    }
+
+    &__list-link {
+        text-decoration: none;
+        display: block;
+        color: $active-regular;
+        padding: 10px 0;
+        width: 100%;
+        background: $grey-bg;
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+        border-radius: $radius-md;
+
+        &.active {
+            color: $accent;
+        }
+
+        &:hover {
+            background: $grey-seperator;
+        }
+
+        @media screen and (min-width:$breakpoint-md) {
+            color: $basic-white;
+            padding: 0;
+            background: transparent;
+            font-size: 16px;
+            border-radius: 0;
+            
+            &:hover {
+                border-bottom: 2px solid $basic-white;
+                padding-bottom: 3px;
+                background: none;
+            }
+
+            &.active {
+                border-bottom: 2px solid $accent;
+                padding-bottom: 3px;
+            }
+        } 
+    }
+}

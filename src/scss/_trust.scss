@@ -1,0 +1,98 @@
+.trust {
+    padding: 30px 0 0;
+  
+     &__title {
+        font-size: 14px;
+        font-weight: 700;
+        color: $main-regular;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 30px;
+     }
+
+     @media screen and (min-width:$breakpoint-xxl) {
+      padding: 60px 0;
+     }
+
+     .trust__basic {
+      max-height: 720px;
+      overflow: auto;
+
+        .trust__wrapper {
+          display: flex;
+          flex-flow: column;
+          max-width: 1720px;
+          margin: 0 auto;
+
+          @media screen and (min-width:$breakpoint-md) {
+              flex-wrap: wrap;
+              flex-direction: row;
+          }
+
+          @media screen and (min-width:$breakpoint-xxl) {
+              border-radius: 12px;
+              overflow: hidden;
+          }
+
+          &-card {
+              height: 120px;
+              padding: 10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              &:nth-child(1) {
+                background: $blue;
+              }
+                &:nth-child(2) {
+                  background: $dark-green;
+                }
+                &:nth-child(3) {
+                  background: $orange;
+                }
+                &:nth-child(4) {
+                  background: $violet;
+                }
+                &:nth-child(5) {
+                  background: $orange;
+                }
+                &:nth-child(6) {
+                  background: $light-grey;
+                }
+                &:nth-child(7) {
+                  background: $red;
+                }
+                &:nth-child(8) {
+                  background: $light-blue;
+                }
+                &:nth-child(9) {
+                  background: $beige;
+                }
+                &:nth-child(10) {
+                  background: $dark-blue;
+                }
+                &:nth-child(11) {
+                  background: $dark-blue-md;
+                }
+                &:nth-child(12) {
+                  background: $black;
+                }
+
+                @media screen and (min-width:$breakpoint-md) {
+                  flex: 1 1 33%;
+                }
+
+                @media screen and (min-width:$breakpoint-lg) {
+                  flex: 1 1 25%;
+                }
+              
+            img {
+              height: auto;
+              width: auto;
+              max-width: 217px;
+              max-height: 100%;  
+            }  
+          }  
+       }
+    }    
+}

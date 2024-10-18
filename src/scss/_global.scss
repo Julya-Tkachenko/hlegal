@@ -1,0 +1,144 @@
+body {
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+
+.wrapper {
+  background: linear-gradient(210deg, #323264, #323264, #643E72);
+  border-bottom-left-radius: $radius-md;
+  border-bottom-right-radius:$radius-md;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: 20px;
+    right: 20px;
+    height: 10px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background: $grey-first;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -20px;
+    left: 40px;
+    right: 40px;
+    height: 10px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background: $grey-second;
+  }
+}
+
+.container {
+ padding: 0 30px;
+
+  @media screen and (min-width:$breakpoint-md) {
+    max-width: 708px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width:$breakpoint-lg) {
+    max-width: 964px;
+  }
+
+  @media screen and (min-width:$breakpoint-xl) {
+    max-width: 1380px; 
+  }
+
+  @media screen and (min-width:$breakpoint-xxl) {
+    max-width: 1660px; 
+  }
+}
+
+.main-title {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+}
+
+.secondary-title {
+  background: $gradient-red-text;
+  background-clip:text;
+  color:transparent;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  @media screen and (min-width:$breakpoint-md) {
+    font-size: 38px;
+  }
+}
+
+
+.primary-link {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  color: $active-regular;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  padding-right: 12px;
+
+  &::after {
+     position: absolute;
+     content: "";
+     top: 4px;
+     right: 0;
+     width: 7px;
+     height: 7px;
+     border-bottom: 2px solid $active-regular;
+     border-right: 2px solid $active-regular;
+     transform: rotate(-45deg);
+  }
+
+  &:hover {
+      color: $accent;
+  } 
+  
+  &:hover::after {
+      border-color: $accent;
+  }
+}
+
+.primary-button {
+    display: inline-block;
+    padding: 18px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 12px;
+    color: $basic-white;
+    background: $active-regular;
+    text-decoration: none;
+    cursor: pointer;
+    filter: drop-shadow(0 0 20px rgba(36, 163, 255, 0.5));
+
+    &:hover {
+        background: $active-hover;
+        filter: drop-shadow(0 0 20px rgba(36, 163, 255, 0.5));
+    }
+  }
+
+.dotted {
+  width: 6px;
+  height: 6px;
+  border-radius: $radius-rounded;
+  display: none;
+
+  &--white {
+    background: $basic-white;
+  }
+
+  &--grey {
+    background: $grey-text;
+  }
+
+  @media screen and (min-width:$breakpoint-md) {
+    display: inline-block;
+  }
+}

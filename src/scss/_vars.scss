@@ -1,0 +1,41 @@
+$basic-white:#fff;
+$grey-first:#CACADB;
+$grey-second:#E7E7F2;
+$grey-text:#B3B3BA;
+$grey-seperator:#E6E6F0;
+$grey-bg:#F5F5FA;
+$blue:#1C4280;
+$dark-blue:#282240;
+$dark-blue-md:#1D4568;
+$dark-green:#143646;
+$orange:#F48B30;
+$violet:#9E4DC3;
+$red:#C71C36;
+$close-red:#EC6F5D;
+$black:#000000;
+$light-blue:#DCF3F9;
+$light-grey:#E2E2E4;
+$beige:#EAEAEA;
+$main-regular:#323264;
+$main-alt:#46466E;
+$main-soft:#686887;
+$accent:#F0145A;
+$active-regular:#24A3FF;
+$active-hover:#0085FF;
+$active-active:#006CCF;
+$gradient-regular: linear-gradient(#323264, #323264, #A54B5F);
+$gradient-soft: linear-gradient(#323264, #323264, #7A425E);
+$gradient-red: linear-gradient(#F0145A, #693264);
+$gradient-supersoft: linear-gradient(#323264, #323264, #643E72);
+$gradient-red-text: linear-gradient(#F0145A, #EF8080);
+$gradient-red-reversed: linear-gradient(to left, #F0145A 0%, #EF8080 100%);
+
+$radius-sm:8px;
+$radius-md:12px;
+$radius-rounded:50%;
+
+// breakpoints
+$breakpoint-md:768px;
+$breakpoint-lg:1024px;
+$breakpoint-xl:1440px;
+$breakpoint-xxl:1920px;

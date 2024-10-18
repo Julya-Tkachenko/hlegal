@@ -1,0 +1,114 @@
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: none;
+    background: $main-regular;
+    
+    &.active {
+        display: block;
+    }
+
+    .modal-content {
+        display: flex;
+        height: 100%;
+        overflow-y: auto;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px 0;
+    }
+
+    .form{
+        position: relative;
+        padding: 30px;
+        background: $grey-bg;
+        border-radius: 12px;
+        
+        @media screen and (min-width:$breakpoint-md) {
+            max-width: 650px; 
+        }
+
+        &__title {
+            margin-bottom: 30px;
+            padding-right: 42px;
+            @include gradient-text
+
+        }
+    
+        &__close {
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            cursor: pointer;
+
+            &:hover {
+                background: $grey-seperator;
+                border-radius: 8px;
+            }
+
+            @media screen and (min-width:$breakpoint-md) {
+                top: 37px;
+            }
+    
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                width: 25px;
+                height: 2px;
+                top: 15px;
+                left: 4px;
+                background: $close-red;
+                transform: rotate(45deg);
+            }
+    
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+
+        &__part {
+            display: flex;
+            flex-direction: column;
+    
+            &-input {
+                padding: 15px;
+                border-radius: 8px;
+                background: $basic-white;
+                border: 1px solid $basic-white;
+                width: 100%;
+                color: $black;
+                margin-bottom: 15px;
+                font-family: "Montserrat";
+                &::placeholder {
+                    color: $grey-text;
+                }
+            }
+    
+            .message {
+                margin-bottom: 30px;
+                resize: none;
+                height: 130px;
+            }
+    
+            .form__subtitle {
+                font-size: 14px;
+                font-weight: 700;
+                color: $grey-text;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+            }
+    
+            .form__btn {
+                margin-top: 15px;
+            }   
+        }  
+    } 
+}
+
+.modal-open {
+    overflow: hidden;
+}

@@ -1,0 +1,98 @@
+.footer {
+    background: $grey-bg;
+    padding-bottom: 30px;
+
+    .footer__wrapper {
+        border-top: 2px solid $grey-seperator;
+     
+        @media screen and (min-width:$breakpoint-md) {
+            position: relative;
+        }
+        
+        .footer__info {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 21px;
+            @media screen and (min-width:$breakpoint-md) {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 10px;
+            }
+
+            &-address {
+                font-size: 16px;
+                font-weight: 400;
+                color: $main-regular;
+            }
+
+            &-link {
+                text-decoration: none;
+                color: $active-regular;
+                font-size: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: $accent;
+                }
+            }
+        }
+
+        .footer__contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            @media screen and (min-width:$breakpoint-md) {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 10px;
+                margin-bottom: 0;
+            }
+            .footer__social {
+                svg {
+                    width: 38px;
+                    height: 38px;
+                    fill: $active-regular;
+                    &:hover {
+                        fill: $accent;
+                    }
+                }
+            }
+            .footer__phone {
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 700;
+                color: $main-alt;
+            }
+            .footer__email {
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 700;
+                color: $active-regular;
+
+                &:hover {
+                    color: $accent;
+                }
+            }
+        }
+
+        .footer__copyright {
+            font-size: 16px;
+            font-weight: 400;
+            color: $grey-text;
+            text-align: center;
+            @media screen and (min-width:$breakpoint-md) {
+                position: absolute;
+                top: 30px;
+                right: 0;
+            }  
+        }
+    }
+}

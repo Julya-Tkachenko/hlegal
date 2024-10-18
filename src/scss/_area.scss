@@ -1,0 +1,40 @@
+.area {
+    padding-bottom: 45px;
+    margin-bottom: 80px;
+
+   &__title {
+    border-top: 4px solid #FFFFFF50;
+    padding-top: 30px;
+    color: $basic-white;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 30px;
+   }
+
+   &__menu {
+        @media screen and (min-width:$breakpoint-md) {
+            column-count: 2;
+            column-gap: 60px;
+        }
+
+        &-item {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 26px;
+            color: $basic-white;
+            padding: 0 0 15px 14px;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: $accent;
+                top: 12px;
+                left: 0;
+            }
+        }
+   }   
+}
